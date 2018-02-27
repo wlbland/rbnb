@@ -8,3 +8,12 @@
     <a class="btn btn-primary btn-lg">Start now</a>
   </div>
 </div>
+
+
+<% if policy(Car).update? %>
+  <%= edit_car_path %>
+<% end %>
+
+<% if policy(Car).destroy? %>
+  <%= destroy_car_path %>
+<% end %>
