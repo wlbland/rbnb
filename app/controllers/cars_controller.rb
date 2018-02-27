@@ -1,6 +1,9 @@
 class CarsController < ApplicationController
+  authorize @car
+
+
   def index
-    @cars = Cars.all
+    @cars = policy_scope(Car).order(created_at: :desc)
   end
 
   def show
@@ -29,24 +32,25 @@ class CarsController < ApplicationController
 
   def update
     @car = Car.find(params[:id])
-  if @car.update(cars_params)
-    redirect_to cars_path
-  else
-    render :new
-  end
+    if @car.update(cars_params)
+      redirect_to cars_path
+    else
+      render :new
+    end
   end
 
 
   def destroy
      @car = Car.find(params[:id])
-  if @car.destroy
-    redirect_to cars_path
-  else
-    render :new
-  end
+    if @car.destroy
+      redirect_to cars_path
+    else
+      render :new
+    end
   end
 
-            private
+
+   private
   def cars_params
     params.require(:car).permit(:user_id, :make, :year, :model, :price_per_day, :story, :available, :photos, )
   end
