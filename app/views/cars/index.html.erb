@@ -11,6 +11,10 @@
 
 
 <!-- with bootstap grid -->
+<% @cars.each do |car| %>
+  <p><%= car.make %></p>
+  <img src="<%= car.photos %>" alt="">
+<% end %>
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-4">
