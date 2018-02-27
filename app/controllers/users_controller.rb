@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
 
-  def inde
+  def dashboard
+    @user = User.find(params[:id])
+  end
+
+
 end
