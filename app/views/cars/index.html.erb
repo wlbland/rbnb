@@ -1,42 +1,21 @@
-<!-- card container  -->
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-  <div class="card-category">Popular</div>
-  <div class="card-description">
-    <h2>Le Wagon Shanghai</h2>
-    <p>Very cool city, the best</p>
-  </div>
-  <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-  <a class="card-link" href="#" ></a>
-</div>
-
-
-<!-- with bootstap grid -->
-<% @cars.each do |car| %>
-  <p><%= car.make %></p>
-  <img src="<%= car.photos %>" alt="">
-<% end %>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-4">
-      <!-- insert <div class="card"> -->
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <!-- insert <div class="card"> -->
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <!-- insert <div class="card"> -->
-    </div>
+
+  <% @cars.each do |car| %>
+
+      <div class="col-xs-12 col-sm-3">
+
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://www.thehansindia.com/assets/3065_Vintage_Cares.jpg');">
+          <div class="card-category"><%= car.make.upcase %></div>
+          <div class="card-description">
+            <p>£<%= car.price_per_day %></p>
+          </div>
+          <%= link_to "", car_path(car), class: "card-link"  %>
+        </div>
+
+      </div>
+
+  <% end %>
+
   </div>
 </div>
-
-<!-- avatars -->
-<img src='https://kitt.lewagon.com/placeholder/users/ssaunier' class="avatar"/>
-<img src='https://kitt.lewagon.com/placeholder/users/alex-felix' class="avatar-large"/>
-<img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="avatar-bordered"/>
-<img src='https://kitt.lewagon.com/placeholder/users/eschults' class="avatar-square"/>
-
-
-
-<!-- 2 types of button  -->
-<a href="#" class="btn-medium">Write a story</a>
-<a href="#" class="btn-treehouse">Start now</a>

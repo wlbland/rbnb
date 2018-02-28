@@ -13,9 +13,11 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <%= render :partial => "layouts/shared/navbar" %>
+    <%= render "shared/navbar" %>
+    <%= render 'shared/flashes' %>
+
     <%= yield %>
-    <%= render :partial => "layouts/shared/footer" %>
+    <%= render "shared/footer" %>
 
   </body>
 </html>

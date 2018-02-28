@@ -1,1 +1,17 @@
-<h1>hello</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <h1>Add your vintage car</h1>
+      <%= simple_form_for(@car) do |f| %>
+        <%= f.input :make %>
+        <%= f.input :model %>
+        <%= f.input :year %>
+        <%= f.input :price_per_day %>
+        <%= f.input :story %>
+        <%= f.submit :go %>
+      <% end %>
+
+    </div>
+  </div>
+
+</div>
