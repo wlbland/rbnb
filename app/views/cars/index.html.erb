@@ -13,7 +13,7 @@
 
       <div class="col-xs-12 col-sm-3">
 
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://media.wired.com/photos/59266cf0cfe0d93c4743028a/16:9/w_2400,c_limit/1961-Ferrari-250-GT-SWB-Berlinetta-by-Scaglietti_Erik-Fuller-c-2016-Courtesy-RM-Sothebys-1.jpg);">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= car.photo_url %>);">
           <div class="card-category"><%= car.make.upcase %></div>
           <div class="card-description">
             <p>£<%= car.price_per_day %></p>
