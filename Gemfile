@@ -12,7 +12,9 @@ gem 'faker'
 gem 'pundit'
 gem 'cloudinary'
 gem 'jquery-rails' # Add this line if you use Rails 5.1
+gem 'bootstrap'
 gem 'carrierwave', '~> 1.2'
+
 
 
 gem 'autoprefixer-rails'
