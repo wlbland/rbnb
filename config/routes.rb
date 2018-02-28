@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
   resources :cars, except: [:destroy]
+  resources :bookings, except: [:destroy]
 
   root to: 'pages#home'
 
