@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :bookings, except: [:destroy]
 
   root to: 'pages#home'
+
+  get "dashboard", to:'pages#dashboard'
 end
