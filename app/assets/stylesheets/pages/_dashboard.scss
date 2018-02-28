@@ -1,0 +1,92 @@
+.dashboard-container {
+  background: image-url('bondcar.jpg');
+  background-position: center;
+  background-size: cover !important;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.dashboard-banner{
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  align-items: center;
+  width: 100%;
+}
+.dashboard-banner h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.dashboard-banner p {
+  font-size: 25px;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+
+.main-header{
+  background: #fff;
+  text: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  display: block;
+}
+
+.btn-treehouse {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: #6AD58B;
+  transition: background 0.3s ease;
+  margin-top: 200px;
+  margin-left: 200px;
+  margin-right: 200px;
+  width: 660px
+  }
+
+.btn-treehouse:hover {
+  opacity: 1;
+  background: #3ac162;
+  text-decoration: none;
+  color: white;
+}
+
+.your-car-bookings{
+  width: 45%;
+  height: 50vh;
+  margin-right: 20px;
+  background-color: black;
+  display: inline-block;
+}
+
+.your-bookings {
+  width: 45%;
+  height: 50vh;
+  background-color: black;
+  display: inline-block;
+}
+
+.btn-twitter{
+color: #fff;
+padding: 10px 15px;
+border-radius: 4px;
+font-weight: lighter;
+background: #FFC7C7;
+margin-left: 400px;
+}
+
+.btn-twitter:hover {
+  opacity: 1;
+  background: #970747;
+  text-decoration: none;
+  color: white;
+}
