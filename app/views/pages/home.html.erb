@@ -5,9 +5,16 @@
       <h1>Rent a classic car for the weekend</h1>
     </div>
 
+  <% if user_signed_in? %>
     <div class="create-account-cta text-center">
-      <a href="#" class="btn-treehouse">Create an account</a>
+      <%=link_to "browse", cars_path, class: "btn-treehouse"%>
     </div>
+  <% else %>
+    <div class="create-account-cta text-center">
+      <%=link_to "Signup", new_user_registration_path, class: "btn-treehouse"%>
+    </div>
+  <% end %>
+
   </div>
 </div>
 
