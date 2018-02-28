@@ -10,6 +10,8 @@ gem 'redis'
 gem 'devise'
 gem 'pundit'
 gem 'cloudinary'
+gem 'jquery-rails' # Add this line if you use Rails 5.1
+
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
