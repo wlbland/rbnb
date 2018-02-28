@@ -1,3 +1,8 @@
+.search-form {
+  margin-top: 10px;
+
+}
+
 .card {
   height: 175px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
@@ -5,6 +10,12 @@
   background-position: center;
   color: white;
   position: relative;
+  margin-top: 10px;
+  transition: .5s;
+}
+
+.card:hover {
+  transform: scale(1.1);
 }
 .card-user {
   position: absolute;
