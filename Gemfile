@@ -8,6 +8,7 @@ gem 'puma'
 gem 'rails', '5.1.5'
 gem 'redis'
 gem 'devise'
+gem 'faker'
 gem 'pundit'
 gem 'cloudinary'
 gem 'jquery-rails' # Add this line if you use Rails 5.1

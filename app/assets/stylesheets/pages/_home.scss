@@ -1,1 +1,53 @@
-// Specific CSS for your home-page
+.home-container {
+  background: image-url('car.jpg');
+  background-position: center;
+  background-size: cover !important;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-header{
+  background: #fff;
+  text: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.btn-treehouse {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: #6AD58B;
+  transition: background 0.3s ease;
+  margin-top: 200px;
+  margin-left: 200px;
+  margin-right: 200px;
+  width: 660px
+  }
+
+.btn-treehouse:hover {
+  opacity: 1;
+  background: #3ac162;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-twitter{
+color: #fff;
+padding: 10px 15px;
+border-radius: 4px;
+font-weight: lighter;
+background: #FFC7C7;
+margin-left: 400px;
+}
+
+.btn-twitter:hover {
+  opacity: 1;
+  background: #970747;
+  text-decoration: none;
+  color: white;
+}
