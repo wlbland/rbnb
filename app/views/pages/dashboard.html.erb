@@ -1,23 +1,21 @@
 <div class="dashboard-container">
   <div class="dashboard-banner">
     <div class="main-header">
-      <h1>Bookings Inbox</h1>
+      <h1>Bookings Dashboard</h1>
     </div>
+    <div class="new-container">
+     <div class="your-car-bookings">
+      <h1>Cars of yours that are booked</h1>
+    <h3><%= link_to "Book a car",  bookings_path %></h3>
 
-  <% if user_signed_in? %>
-    <div class="create-account-cta text-center">
-<!--       <%#=link_to "check your bookings", bookings_path, class: "btn-treehouse"%>
- -->      <div class="messages">
-                <div class="message-card">
-                  <h1>Messages from bookees</h1>
-                </div>
-               </div>
-      </div>
-  <% else %>
-    <div class="create-account-cta text-center">
-<!--       <%#=link_to "Signup", new_user_registration_path, class: "btn-treehouse"%>
- -->    </div>
-  <% end %>
+     </div>
+     <div class="your-bookings">
+      <h1>Your bookings for other people's cars</h1>
+      <h3><%= link_to "See all cars", cars_path %></h3>
 
+
+     </div>
+    </div>
   </div>
 </div>
+

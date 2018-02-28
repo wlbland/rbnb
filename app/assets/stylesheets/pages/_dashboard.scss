@@ -15,9 +15,8 @@
   height: 100vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  width: 100%;
 }
 .dashboard-banner h1 {
   font-size: 50px;
@@ -38,6 +37,7 @@
   text: center;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  display: block;
 }
 
 .btn-treehouse {
@@ -58,6 +58,21 @@
   background: #3ac162;
   text-decoration: none;
   color: white;
+}
+
+.your-car-bookings{
+  width: 45%;
+  height: 50vh;
+  margin-right: 20px;
+  background-color: black;
+  display: inline-block;
+}
+
+.your-bookings {
+  width: 45%;
+  height: 50vh;
+  background-color: black;
+  display: inline-block;
 }
 
 .btn-twitter{
