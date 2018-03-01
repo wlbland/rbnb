@@ -12,15 +12,16 @@
 
     <% @cars&.each do |car| %>
       <div class="col-xs-12 col-sm-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path car.photo, height: 300, width: 400, crop: :fill %>')">
-          <div class="card-category"><%= car.make.upcase %></div>
-            <div class="card-description">
-             <p>£<%= car.price_per_day %></p>
+        <%= link_to car_path(car) do  %>
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+           url('<%= cl_image_path car.photo, height: 300, width: 400, crop: :fill %>')">
+            <div class="card-category"><%= car.make.upcase %></div>
+              <div class="card-description">
+               <p>£<%= car.price_per_day %></p>
+              </div>
             </div>
-            <a class="card-link" href="#" ></a>
           </div>
-        </div>
+        <% end %>
       </div>
     <% end %>
   </div>
