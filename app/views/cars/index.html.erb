@@ -10,7 +10,9 @@
 
   <div class="row">
 
-    <% @cars&.each do |car| %>
+
+    <% @cars.each do |car| %>
+    <% if car.available %>
       <div class="col-xs-12 col-sm-3">
         <%= link_to car_path(car) do  %>
           <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
@@ -21,6 +23,7 @@
               </div>
             </div>
           </div>
+        <% end %>
         <% end %>
       </div>
     <% end %>

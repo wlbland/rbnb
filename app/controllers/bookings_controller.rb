@@ -15,6 +15,7 @@ class BookingsController < ApplicationController
     @booking.car = Car.find(params[:car_id])
     @booking.user = current_user
     if @booking.save
+      @booking.car.update_attributes(available: false)
       redirect_to dashboard_path
     else
       render :new
