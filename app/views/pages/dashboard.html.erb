@@ -4,22 +4,32 @@
     <div class="left">
       <div class="listings-cards">
         <div class="dashboard-card">
-          <h4>Your Listings</h4>
-          <p> listing 1</p>
-          <p> listing 2</p>
-          <p> listing 3</p>
+          <h4><u>Your Listed Cars</u></h4>
+          <% @cars.each do |car| %>
+            <div class="car">
+              <p><%= car.make %></p>
+              <p><%= car.model %></p>
+              <p> <%= car.year %></p>
+              <p><%= car.user_id %></p>
+              <p><%= car.price_per_day %></p>
+              <p> <%= car.story %></p>
+              <p><%= car.main_image %></p>
+            </div>
+
+          <%end %>
         </div>
-          <%= link_to "List another car", new_car_path %>
+          <%= link_to "List car", new_car_path %>
       </div>
     </div>
 
     <div class="right">
       <div class="bookings-cards">
         <div class="dashboard-card">
-          <h4>Your Bookings</h4>
+          <h4><u>Your Bookings</u></h4>
           <p>booking 2</p>
           <p>booking 3</p>
         </div>
+          <%= link_to "Book car", new_booking_path %>
 
       </div>
     </div>

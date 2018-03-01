@@ -9,7 +9,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @user = current_user
+    @cars = @user.cars
   end
-
-
 end
