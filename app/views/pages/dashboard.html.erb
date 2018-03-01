@@ -12,13 +12,14 @@
               <p> <%= car.year %></p>
               <p><%= car.user_id %></p>
               <p><%= car.price_per_day %></p>
-
-              <p><%= car.story %></p>
+              <p> <%= car.story %></p>
               <p><%= cl_image_tag car.photo %></p>
             </div>
           <% end %>
         </div>
-          <%= link_to "List car", new_car_path %>
+          <%= link_to new_car_path do %>
+          <div class="btn-twitter">List your car</div>
+        <% end %>
       </div>
 
     </div>
@@ -26,17 +27,22 @@
     <div class="right">
       <div class="bookings-cards">
         <div class="dashboard-card">
-          <h4>Your Bookings</h4>
-          <% if current_user.bookings %>
-            <%  current_user.bookings.each do |booking| %>
-              <div class="booking-card">
-                <p><%= booking.car_id %></p>
-                <p><%= booking.start_date %></p>
-                <p><%= booking.end_date %></p>
-              </div>
-            <% end %>
-          <% end %>
+          <h4><u>Your Bookings</u></h4>
+            <% if current_user.bookings %>
++            <%  current_user.bookings.each do |booking| %>
++              <div class="booking">
++                <p><%= booking.car_id %></p>
++                <p><%= booking.start_date %></p>
++                <p><%= booking.end_date %></p>
++              </div>
++            <% end %>
++          <% end %>
+         </div>
+
         </div>
+          <%= link_to cars_path do %>
+            <div class="btn-twitter">Browse cars to book</div>
+          <% end %>
       </div>
     </div>
 
