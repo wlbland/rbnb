@@ -13,27 +13,31 @@
               <p><%= car.user_id %></p>
               <p><%= car.price_per_day %></p>
               <p> <%= car.story %></p>
-              <p><%= car.main_image %></p>
-            </div>   
+              <p><%= car.photo %></p>
+            </div>
           <% end %>
         </div>
           <%= link_to "List car", new_car_path %>
       </div>
-      
     </div>
 
     <div class="right">
       <div class="bookings-cards">
         <div class="dashboard-card">
           <h4><u>Your Bookings</u></h4>
-          <p>booking 2</p>
-          <p>booking 3</p>
+          <% if current_user.bookings %>
+            <%  current_user.bookings.each do |booking| %>
+              <div class="booking">
+                <p><%= booking.car_id %></p>
+                <p><%= booking.start_date %></p>
+                <p><%= booking.end_date %></p>
+              </div>
+            <% end %>
+          <% end %>
         </div>
-          <%= link_to "Book car", new_booking_path %>
+          <%= link_to "Search car to book", cars_path %>
       </div>
     </div>
 
   </div>
 </div>
-
-
