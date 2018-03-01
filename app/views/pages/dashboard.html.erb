@@ -6,14 +6,14 @@
         <div class="dashboard-card">
           <h4><u>Your Listed Cars</u></h4>
           <% @cars.each do |car| %>
-            <div class="car">
+            <div class="car-card">
               <p><%= car.make %></p>
               <p><%= car.model %></p>
               <p> <%= car.year %></p>
               <p><%= car.user_id %></p>
               <p><%= car.price_per_day %></p>
               <p> <%= car.story %></p>
-              <p><%= car.photo %></p>
+              <p><%= cl_image_tag car.photo %></p>
             </div>
           <% end %>
         </div>
@@ -48,5 +48,3 @@
 
   </div>
 </div>
-
-
