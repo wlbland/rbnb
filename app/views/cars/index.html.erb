@@ -1,37 +1,32 @@
-  <div class="container">
-    <form action="" class="form form-inline search-form">
-      <input type="text" class="form-control" placeholder="make">
-      <input type="text" class="form-control" placeholder="model">
-      <input type="text" class="form-control" placeholder="year">
-      <input type="submit" class="btn btn-default" value="search">
+<div class="container">
 
-    </form>
+  <form action="" class="form form-inline search-form">
+    <input type="text" class="form-control" placeholder="make">
+    <input type="text" class="form-control" placeholder="model">
+    <input type="text" class="form-control" placeholder="year">
+    <input type="submit" class="btn btn-default" value="search">
+
+  </form>
 
   <div class="row">
 
-    <% @cars.each do |car| %>
-
+    <% @cars&.each do |car| %>
       <div class="col-xs-12 col-sm-3">
-
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://www.thehansindia.com/assets/3065_Vintage_Cares.jpg');">
-          <div class="card-category"><%= car.make.upcase %></div>
-          <div class="card-description">
-            <p>£<%= car.price_per_day %></p>
+        <%= link_to car_path(car) do  %>
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+           url('<%= cl_image_path car.photo, height: 300, width: 400, crop: :fill %>')">
+            <div class="card-category"><%= car.make.upcase %></div>
+              <div class="card-description">
+               <p>£<%= car.price_per_day %></p>
+              </div>
+            </div>
           </div>
-          <%= link_to "", car_path(car), class: "card-link"  %>
-        </div>
-
+        <% end %>
       </div>
-
     <% end %>
-
   </div>
+</div>
 
-  </div>
 
 
-<!-- <div class="flex-container">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-</div -->
+
