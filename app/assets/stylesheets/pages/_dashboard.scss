@@ -22,21 +22,35 @@
 
 .right .dashboard-card, .left .dashboard-card{
   background-color:  #970747;
-  opacity: 0.7;
   margin: 20px;
   padding: 10px;
   border-radius: 10px;
 }
 
-.car {
+.car-card, .booking-card {
   background-color: white;
-  opacity: 0.7;
   margin: 20px;
   padding: 10px;
   border-radius: 10px;
   color: black;
 }
 
+
+
+.btn-twitter {
+  color: white;
+  padding: 15px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 10px;
+  background: #6AD58B;
+  transition: background 0.3s ease;
+}
+.btn-twitter:hover {
+  background: #3ac162;
+  text-decoration: none;
+  color: white;
+}
 
 // .dashboard-banner{
 //   color: black;

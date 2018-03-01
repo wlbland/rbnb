@@ -4,20 +4,22 @@
     <div class="left">
       <div class="listings-cards">
         <div class="dashboard-card">
-          <h4><u>Your Listed Cars</u></h4>
+          <h4>Your Listed Cars</h4>
           <% @cars.each do |car| %>
-            <div class="car">
+            <div class="car-card">
               <p><%= car.make %></p>
               <p><%= car.model %></p>
               <p> <%= car.year %></p>
               <p><%= car.user_id %></p>
               <p><%= car.price_per_day %></p>
-              <p> <%= car.story %></p>
+              <p><%= car.story %></p>
               <p><%= car.photo %></p>
             </div>
           <% end %>
         </div>
-          <%= link_to "List car", new_car_path %>
+          <%= link_to new_car_path do %>
+          <div class="btn-twitter">List your car</div>
+        <% end %>
       </div>
 
     </div>
@@ -26,8 +28,17 @@
       <div class="bookings-cards">
         <div class="dashboard-card">
           <h4><u>Your Bookings</u></h4>
-          <p>booking 2</p>
-          <p>booking 3</p>
+            <% if current_user.bookings %>
++            <%  current_user.bookings.each do |booking| %>
++              <div class="booking">
++                <p><%= booking.car_id %></p>
++                <p><%= booking.start_date %></p>
++                <p><%= booking.end_date %></p>
++              </div>
++            <% end %>
++          <% end %>
+         </div>
+
         </div>
           <%= link_to "Book car", cars_path %>
       </div>
@@ -35,5 +46,3 @@
 
   </div>
 </div>
-
-
