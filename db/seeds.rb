@@ -8,6 +8,9 @@
 
 Car.destroy_all
 
+new_user = User.new(email:"a@a.com")
+
+
 20.times do
 
   Car.create!(make: ["Renault", "BMW", "VW", "Mini Cooper", "Aston Martin", "Porsche", "Lamborghini"].sample,
@@ -16,8 +19,8 @@ Car.destroy_all
               price_per_day: (19..2000).to_a.sample,
               available: [true, false].sample,
               story: Faker::Lorem.paragraph,
-              photos: Faker::Internet.url,
-              user_id: (1..2).to_a.sample)
+              photo_url: Faker::Internet.url,
+              user_id: new_user.id)
 end
 
 p "Created #{Car.count} cars"
