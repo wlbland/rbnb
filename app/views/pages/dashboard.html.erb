@@ -12,8 +12,8 @@
               <p> <%= car.year %></p>
               <p><%= car.user_id %></p>
               <p><%= car.price_per_day %></p>
-              <p> <%= car.story %></p>
-              <p><%= cl_image_tag car.photo %></p>
+              <p><%= car.story %></p>
+              <p><%= car.photo %></p>
             </div>
           <% end %>
         </div>
@@ -40,9 +40,7 @@
          </div>
 
         </div>
-          <%= link_to cars_path do %>
-            <div class="btn-twitter">Browse cars to book</div>
-          <% end %>
+          <%= link_to "Book car", cars_path %>
       </div>
     </div>
 
