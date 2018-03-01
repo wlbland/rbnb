@@ -13,13 +13,13 @@
               <p><%= car.user_id %></p>
               <p><%= car.price_per_day %></p>
               <p> <%= car.story %></p>
-              <p><%= car.main_image %></p>
-            </div>   
+              <p><%= car.photo %></p>
+            </div>
           <% end %>
         </div>
           <%= link_to "List car", new_car_path %>
       </div>
-      
+
     </div>
 
     <div class="right">
@@ -29,7 +29,7 @@
           <p>booking 2</p>
           <p>booking 3</p>
         </div>
-          <%= link_to "Book car", new_booking_path %>
+          <%= link_to "Book car", cars_path %>
       </div>
     </div>
 
