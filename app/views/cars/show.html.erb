@@ -13,3 +13,4 @@
 <%= link_to "edit", edit_car_path(@car), class: "btn btn-primary"  %>
 <% end %>
 
+<%= cl_image_tag @car.photo, height: 300, width: 400, crop: :fill %>

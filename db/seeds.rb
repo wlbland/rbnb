@@ -8,7 +8,7 @@
 
 Car.destroy_all
 
-new_user = User.new(email:"a@a.com")
+new_user = User.create!(email:"a@a.com")
 
 
 20.times do
@@ -19,7 +19,7 @@ new_user = User.new(email:"a@a.com")
               price_per_day: (19..2000).to_a.sample,
               available: [true, false].sample,
               story: Faker::Lorem.paragraph,
-              photo_url: Faker::Internet.url,
+              photo: Faker::Internet.url,
               user_id: new_user.id)
 end
 
