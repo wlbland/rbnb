@@ -2,9 +2,9 @@
   <div class="flex-container">
 
     <div class="left">
-      <div class="listings-cards">
+      <div class="bookings-cards">
         <div class="dashboard-card">
-          <h4><u>Your Listed Cars<u></h4>
+          <h4><u>Your Listed Cars</u></h4>
           <% @cars.each do |car| %>
             <div class="car-card">
               <p><%= car.make %></p>
@@ -17,9 +17,7 @@
             </div>
           <% end %>
         </div>
-          <%= link_to new_car_path do %>
-          <div class="btn-twitter">List your car</div>
-        <% end %>
+        <%= link_to "List your car", new_car_path, class: "btn-twitter text-center", id: "dashboard-car-link" %>
       </div>
 
     </div>
@@ -34,15 +32,14 @@
                   <p><%= booking.car.make %> - <%= booking.car.model   %></p>
                   <p>Booking Start: <%= booking.start_date %></p>
                   <p>Booking End: <%= booking.end_date %></p>
+                  <%= cl_image_tag booking.car.photo, class: "car-card-photo" %>
                 </div>
               <% end %>
             <% end %>
          </div>
 
         </div>
-          <%= link_to cars_path do %>
-          <div class="btn-twitter">Browse cars to book</div>
-          <% end %>
+        <%= link_to "Browse cars to book", cars_path, class: "btn-twitter text-center", id: "dashboard-car-link"%>
       </div>
     </div>
 
