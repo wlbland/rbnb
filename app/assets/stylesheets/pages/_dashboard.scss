@@ -11,29 +11,31 @@
 
 .left {
   flex: 1 0 50%;
-  color: white;
+  color: #000;
 }
 
 .right {
   flex: 1 0 50%;
-  color: white;
+  color: #000;
 
 }
 
 .right .dashboard-card, .left .dashboard-card{
-  background-color:  #970747;
+  background-color:  #fff;
   margin: 20px;
   padding: 10px;
   border-radius: 10px;
+  opacity: 0.9;
 }
 
 .car-card, .booking-card {
-  background-color: white;
+  background-color: #808080;
   margin: 20px;
   padding: 10px;
   border-radius: 10px;
   color: black;
   max-width: 300px;
+
 
 }
 
@@ -41,11 +43,14 @@
 
 .btn-twitter {
   color: white;
-  padding: 15px 20px;
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 10px;
-  background: #6AD58B;
+  border: 1px solid #808080;
+  // padding: 15px 20px;
+  border-radius: 50px solid #808080;
+  padding: 10px 50px;
+  margin: 30px  40px;
+  font-weight: bolder;
+  font-size: 20px;
+  background: #808080;
   transition: background 0.3s ease;
 }
 .btn-twitter:hover {

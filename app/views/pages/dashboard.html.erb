@@ -4,7 +4,7 @@
     <div class="left">
       <div class="listings-cards">
         <div class="dashboard-card">
-          <h4>Your Listed Cars</h4>
+          <h4><u>Your Listed Cars<u></h4>
           <% @cars.each do |car| %>
             <div class="car-card">
               <p><%= car.make %></p>
@@ -14,9 +14,6 @@
               <p><%= car.price_per_day %></p>
               <p><%= car.story %></p>
               <%= cl_image_tag car.photo, class: "car-card-photo" %>
-
-              <!-- here you can see i put the car-card-photo class on the photo itself, not the div it was inside.  -->
-
             </div>
           <% end %>
         </div>
@@ -32,18 +29,20 @@
         <div class="dashboard-card">
           <h4><u>Your Bookings</u></h4>
             <% if current_user.bookings %>
-+            <%  current_user.bookings.each do |booking| %>
-+              <div class="booking">
-+                <p><%= booking.car_id %></p>
-+                <p><%= booking.start_date %></p>
-+                <p><%= booking.end_date %></p>
-+              </div>
-+            <% end %>
-+          <% end %>
+              <% current_user.bookings.each do |booking| %>
+                <div class="car-card">
+                  <p><%= booking.car.make %> - <%= booking.car.model   %></p>
+                  <p>Booking Start: <%= booking.start_date %></p>
+                  <p>Booking End: <%= booking.end_date %></p>
+                </div>
+              <% end %>
+            <% end %>
          </div>
 
         </div>
-          <%= link_to "Book car", cars_path %>
+          <%= link_to cars_path do %>
+          <div class="btn-twitter">Browse cars to book</div>
+          <% end %>
       </div>
     </div>
 
