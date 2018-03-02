@@ -12,9 +12,7 @@
       <div class="col-cs-6 car-link">
       <% if current_user == @car.user %>
         <%= link_to "edit", edit_car_path(@car), class: "btn btn-primary text-center"  %>
-      <% end %>
-
-      <% unless current_user == @car.user %>
+      <% else %>
         <%= link_to "Book this car", new_car_booking_path(@car), class: "btn btn-primary"  %>
       <% end %>
       </div>
