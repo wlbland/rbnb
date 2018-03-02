@@ -14,6 +14,7 @@ gem 'cloudinary'
 gem 'jquery-rails' # Add this line if you use Rails 5.1
 gem 'carrierwave', '~> 1.2'
 gem 'pg_search'
+gem 'unsplash'
 
 
 gem 'autoprefixer-rails'
