@@ -11,39 +11,43 @@
 
 .left {
   flex: 1 0 50%;
-  color: white;
+  color: #000;
 }
 
 .right {
   flex: 1 0 50%;
-  color: white;
+  color: #000;
 
 }
 
 .right .dashboard-card, .left .dashboard-card{
-  background-color:  #970747;
+  background-color:  #fff;
   margin: 20px;
   padding: 10px;
   border-radius: 10px;
+  opacity: 0.8;
 }
 
 .car-card, .booking-card {
-  background-color: white;
+  background-color: #808080;
   margin: 20px;
   padding: 10px;
   border-radius: 10px;
   color: black;
+  max-width: 300px;
 }
-
-
 
 .btn-twitter {
   color: white;
-  padding: 15px 20px;
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 10px;
-  background: #6AD58B;
+  text-align: center;
+  border: 1px solid #808080;
+  text-decoration: none;
+  border-radius: 50px solid #808080;
+  padding: 10px 50px;
+  margin: 60px  40px;
+  font-weight: bolder;
+  font-size: 20px;
+  background: #808080;
   transition: background 0.3s ease;
 }
 .btn-twitter:hover {
@@ -52,88 +56,21 @@
   color: white;
 }
 
-// .dashboard-banner{
-//   color: black;
-//   text-align: center;
-//   height: 100vh;
-//   /* if you have a 70px navbar => height: calc(100vh - 70px); */
-//   background-size: cover !important;
-//   align-items: center;
-//   width: 100%;
-// }
-// .dashboard-banner h1 {
-//   font-size: 50px;
-//   font-weight: bold;
-//   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-// }
-// .dashboard-banner p {
-//   font-size: 25px;
-//   font-weight: lighter;
-//   color: rgb(255, 255, 255);
-//   opacity: 0.6;
-//   margin-bottom: 30px;
-// }
+.car-card-photo {
+  height: 200px;
+  width: 100%;
+}
 
-// .main-header{
-//   background: #fff;
-//   text: center;
-//   border-top-right-radius: 10px;
-//   border-top-left-radius: 10px;
-//   display: block;
-// }
 
-// .btn-treehouse {
-//   color: white;
-//   padding: 10px 15px;
-//   border-radius: 4px;
-//   font-weight: bold;
-//   background: #6AD58B;
-//   transition: background 0.3s ease;
-//   margin-top: 200px;
-//   margin-left: 200px;
-//   margin-right: 200px;
-//   width: 660px
-//   }
+#dashboard-car-link {
+  position: relative;
+  left: 165px;
+}
 
-// .btn-treehouse:hover {
-//   opacity: 1;
-//   background: #3ac162;
-//   text-decoration: none;
-//   color: white;
-// }
 
-// .your-car-bookings{
-//   width: 45%;
-//   height: 45vh;
-//   margin-right: 20px;
-//   background-color: #970747;
-//   display: inline-block;
-//   opacity: 0.5;
-// }
 
-// .your-bookings {
-//   width: 45%;
-//   height: 50vh;
-//   background-color: #A5ECD7;
-//   display: inline-block;
-//   opacity: 0.5;
-// }
 
-// .button_to{
-//   margin-left: 600px;
-// }
-// // .btn-twitter{
-// // color: #fff;
-// // padding: 10px 15px;
-// // border-radius: 4px;
-// // font-weight: lighter;
-// // background: #FFC7C7;
-// // margin-left: 400px;
-// // }
 
-// .btn-twitter:hover {
-//   opacity: 1;
-//   background: #970747;
-//   text-decoration: none;
-//   color: white;
-// }
+
+
+

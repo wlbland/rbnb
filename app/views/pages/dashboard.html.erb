@@ -2,9 +2,9 @@
   <div class="flex-container">
 
     <div class="left">
-      <div class="listings-cards">
+      <div class="bookings-cards">
         <div class="dashboard-card">
-          <h4>Your Listed Cars</h4>
+          <h4><u>Your Listed Cars</u></h4>
           <% @cars.each do |car| %>
             <div class="car-card">
               <p><%= car.make %></p>
@@ -13,13 +13,11 @@
               <p><%= car.user_id %></p>
               <p><%= car.price_per_day %></p>
               <p><%= car.story %></p>
-              <p><%= car.photo %></p>
+              <%= cl_image_tag car.photo, class: "car-card-photo" %>
             </div>
           <% end %>
         </div>
-          <%= link_to new_car_path do %>
-          <div class="btn-twitter">List your car</div>
-        <% end %>
+        <%= link_to "List your car", new_car_path, class: "btn-twitter text-center", id: "dashboard-car-link" %>
       </div>
 
     </div>
@@ -29,18 +27,19 @@
         <div class="dashboard-card">
           <h4><u>Your Bookings</u></h4>
             <% if current_user.bookings %>
-+            <%  current_user.bookings.each do |booking| %>
-+              <div class="booking">
-+                <p><%= booking.car_id %></p>
-+                <p><%= booking.start_date %></p>
-+                <p><%= booking.end_date %></p>
-+              </div>
-+            <% end %>
-+          <% end %>
+              <% current_user.bookings.each do |booking| %>
+                <div class="car-card">
+                  <p><%= booking.car.make %> - <%= booking.car.model   %></p>
+                  <p>Booking Start: <%= booking.start_date %></p>
+                  <p>Booking End: <%= booking.end_date %></p>
+                  <%= cl_image_tag booking.car.photo, class: "car-card-photo" %>
+                </div>
+              <% end %>
+            <% end %>
          </div>
 
         </div>
-          <%= link_to "Book car", cars_path %>
+        <%= link_to "Browse cars to book", cars_path, class: "btn-twitter text-center", id: "dashboard-car-link"%>
       </div>
     </div>
 
