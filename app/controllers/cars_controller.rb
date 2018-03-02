@@ -19,6 +19,7 @@ class CarsController < ApplicationController
 
 
   def create
+
     @car = Car.new(cars_params)
     @car.user = current_user
     # authorize @car
