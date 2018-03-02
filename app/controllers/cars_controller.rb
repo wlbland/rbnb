@@ -2,8 +2,18 @@ class CarsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @cars = Car.all
+    if params[:query].present?
+      @cars = Car.search_by_make_and_model(params[:query])
+    else
+      @cars= Car.all
+    end
+    # if we want to replace the search bar with a filter. This is how we'll do it.
     # @cars = policy_scope(Car).order(created_at: :desc)
+
+    # @cars = Car.all
+    # @cars = @cars.where(make: params[:make]) if params[:make]
+    # @cars = @cars.where(model: params[:model]) if params[:model]
+    # @cars = @cars.where('price <= ?', params[:price]) if params[:price]
   end
 
   def show
