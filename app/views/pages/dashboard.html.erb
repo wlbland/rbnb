@@ -13,7 +13,9 @@
               <p><%= car.user_id %></p>
               <p><%= car.price_per_day %></p>
               <p><%= car.story %></p>
-              <p><%= car.photo %></p>
+              <div class="car-card-photo">
+                <%= cl_image_tag car.photo %>
+              </div>
             </div>
           <% end %>
         </div>
