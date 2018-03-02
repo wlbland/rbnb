@@ -8,7 +8,7 @@ class CreateCars < ActiveRecord::Migration[5.1]
       t.integer :price_per_day
       t.boolean :available, default: true
       t.text :story
-      t.string :photos
+      t.string :photo
 
       t.timestamps
     end
